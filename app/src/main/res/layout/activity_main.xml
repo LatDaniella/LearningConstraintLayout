@@ -3,44 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button32"
+    <ImageView
+        android:id="@+id/imageViewHeader"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Button"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="h,16:9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/header" />
+
+    <ImageView
+        android:id="@+id/imageViewPoster"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewHeader"
+        app:layout_constraintDimensionRatio="w,2:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHeader"
+        app:srcCompat="@drawable/poster" />
 
     <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewMovieHeading"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="TextViewTextViewTextViewTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="16dp"
+        android:text="Beauty and the Beast"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPoster"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHeader" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="right"
-        app:constraint_referenced_ids="textView7,button32"
-        tools:layout_editor_absoluteX="411dp" />
-
-    <Button
-        android:id="@+id/button33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:text="Button"
-        app:layout_constraintStart_toEndOf="@id/barrier5"
-        tools:layout_editor_absoluteY="51dp" />
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="44dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/ic_bookmark"
+        tools:layout_editor_absoluteX="351dp"
+        tools:layout_editor_absoluteY="275dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
