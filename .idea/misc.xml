@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.24736842105263157" />
+        <entry key="app/src/main/res/drawable/ic_family.xml" value="0.24736842105263157" />
+        <entry key="app/src/main/res/drawable/ic_googleplaypolygon.xml" value="0.24736842105263157" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
       </map>
     </option>
